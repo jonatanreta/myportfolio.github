@@ -249,3 +249,14 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+ 
+ // Cargar la animación Lottie
+var animation = lottie.loadAnimation({
+  container: document.getElementById('hand-animation'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'https://lottie.host/embed/45a9bfdb-b24a-4bab-929e-57c7fd8dc3e4/oCUaES1ZwW.json'
+});
