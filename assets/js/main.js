@@ -252,11 +252,29 @@
 
 
  
- // Cargar la animación Lottie
-var animation = lottie.loadAnimation({
-  container: document.getElementById('hand-animation'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'https://lottie.host/embed/45a9bfdb-b24a-4bab-929e-57c7fd8dc3e4/oCUaES1ZwW.json'
+ 
+
+
+// Animar el cursor
+document.body.addEventListener("mousemove", evt => {
+  const mouseX = evt.clientX;
+  const mouseY = evt.clientY;
+  
+  gsap.set(".cursor", {
+    x: mouseX,
+    y: mouseY
+  });
+  
+  gsap.to(".shape", {
+    x: mouseX,
+    y: mouseY,
+    stagger: -0.1
+  });
 });
+
+
+
+// marquee
+
+
+
