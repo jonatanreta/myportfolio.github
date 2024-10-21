@@ -1610,9 +1610,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 
 /* Aísla los estilos dentro de .spotlight-section */
@@ -1813,7 +1811,7 @@ h1 {
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
-  background-color: rgba(249, 249, 249, 0.8); /* Fondo negro mate */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro mate */
   width: 100%; /* Asegura que ocupe todo el ancho de su contenedor */
   padding: 1rem 0; /* Añade padding vertical */
 }
