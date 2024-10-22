@@ -1811,7 +1811,7 @@ h1 {
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro mate */
+  background-color: rgba(0, 0, 0, 0.811); /* Fondo negro mate */
   width: 100%; /* Asegura que ocupe todo el ancho de su contenedor */
   padding: 1rem 0; /* Añade padding vertical */
 }
@@ -1823,6 +1823,7 @@ h1 {
   gap: var(--gap);
   min-width: 100%;
   list-style: none; /* Elimina los puntos de lista */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
 }
 
 .marquee__content > li {
