@@ -274,7 +274,26 @@ document.body.addEventListener("mousemove", evt => {
 
 
 
-// marquee
+// portfolio scroll
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Inicializa ScrollMagic
+  const controller = new ScrollMagic.Controller();
+
+  // Crea una nueva escena para cada panel
+  const panels = document.querySelectorAll('.panel');
+  panels.forEach((panel, index) => {
+      new ScrollMagic.Scene({
+          triggerElement: panel, // Elemento que activa la escena
+          triggerHook: 0, // Empieza en la parte superior de la ventana
+          duration: '100%' // Dura el 100% de la altura del panel
+      })
+      .setPin(panel) // Fija el panel en su lugar
+      .addTo(controller); // Añade la escena al controlador
+  });
+});
+
+
 
 
 

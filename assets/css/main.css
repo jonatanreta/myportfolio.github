@@ -672,13 +672,13 @@ section,
 
 /* About Section */
 .about {
-  background-color: #141414;
+  background-color: #181818;
   padding: 100px 250px 100px 220px; /* Increased right padding for desktop */
   text-align: left;
 }
 
 .about .container {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .content-wrapper {
@@ -842,6 +842,193 @@ section,
 
 
 
+/* BANNER HERO SECTION*/
+.spotlight-section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.shapes {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #2e2e2e;
+  overflow: hidden;
+}
+
+.shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+.shape.shape-1 {
+  background: #005ffe;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px; /* Centra la forma */
+}
+.shape.shape-2 {
+  background: #ffe5e3;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px; /* Centra la forma */
+}
+.shape.shape-3 {
+  background: #ffcc57;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px; /* Centra la forma */
+}
+
+.content {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* Cambia a columna para alinear verticalmente */
+  justify-content: center; /* Alinea verticalmente al centro */
+  align-items: flex-start; /* Alinea horizontalmente a la izquierda */
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  mix-blend-mode: screen;
+  padding: 20px 300px; /* Añade un padding para más espacio a la derecha */
+}
+
+.small-text {
+  font-size: 20px;
+  color: #3b3b3b;
+  margin-bottom: 10px; /* Añade espacio debajo del texto pequeño */
+}
+
+h1 {
+  font-size: 80px;
+  color: #111111;
+  margin: 0; /* Elimina márgenes para reducir el espacio */
+  line-height: 1.1; /* Controla el espacio entre líneas para los h1 */
+}
+
+
+.description {
+  font-size: 20px; /* Tamaño de la descripción */
+  color: #3b3b3b; /* Asegúrate de que el color sea negro */
+  margin-top: 20px; /* Espacio arriba de la descripción */
+}
+
+@media (min-width: 419px) {
+  h1 {
+    font-size: calc((0.0989119683 * 100vw + 58.5558852621px));
+  }
+}
+@media (min-width: 1430px) {
+  h1 {
+    font-size: 200px;
+  }
+}
+
+.cursor {
+  position: fixed;
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.btn {
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes completamente redondeados */
+  text-decoration: none; /* Elimina el subrayado */
+  font-weight: bold; /* Texto en negrita */
+  margin: 0 10px; /* Espaciado horizontal entre botones */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+.btn-black {
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+}
+
+.btn-transparent {
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid black; /* Borde negro */
+  color: black; /* Texto negro */
+}
+
+.btn:hover {
+  opacity: 0.8; /* Efecto al pasar el ratón */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .content {
+    padding: 20px 100px;
+  }
+  
+  h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 50px;
+  }
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  .small-text, .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 20px 30px;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  .small-text, .description {
+    font-size: 16px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    margin: 10px 0;
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-height: 600px) {
+  .content {
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+}
+
+
+
 
 
 
@@ -879,13 +1066,14 @@ section,
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: ease-in-out 0.3s;
-  color: #000; /* Color del título normal */
+  color: #282828; /* Color del título normal */
 }
 
 .services .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: #3b3b3b;
 }
 
 @media (min-width: 1365px) {
@@ -909,7 +1097,7 @@ section,
 .section-title h2 {
   position: relative;
   padding-bottom: 10px;
-  color: #000; /* Color negro para el título */
+  color: #111111; /* Color negro para el título */
 }
 
 .section-title h2::after {
@@ -923,7 +1111,9 @@ section,
   left: 0;
 }
 
-
+.section-title p{
+  color: #3b3b3b;
+}
 
 /* Partners Section */
 .partners {
@@ -1613,191 +1803,6 @@ section,
 
 
 
-/* Aísla los estilos dentro de .spotlight-section */
-.spotlight-section {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-.shapes {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: #2e2e2e;
-  overflow: hidden;
-}
-
-.shape {
-  will-change: transform;
-  position: absolute;
-  border-radius: 50%;
-}
-.shape.shape-1 {
-  background: #005ffe;
-  width: 650px;
-  height: 650px;
-  margin: -325px 0 0 -325px; /* Centra la forma */
-}
-.shape.shape-2 {
-  background: #ffe5e3;
-  width: 440px;
-  height: 440px;
-  margin: -220px 0 0 -220px; /* Centra la forma */
-}
-.shape.shape-3 {
-  background: #ffcc57;
-  width: 270px;
-  height: 270px;
-  margin: -135px 0 0 -135px; /* Centra la forma */
-}
-
-.content {
-  top: 0;
-  left: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column; /* Cambia a columna para alinear verticalmente */
-  justify-content: center; /* Alinea verticalmente al centro */
-  align-items: flex-start; /* Alinea horizontalmente a la izquierda */
-  height: 100vh;
-  width: 100vw;
-  background: #fff;
-  mix-blend-mode: screen;
-  padding: 20px 200px; /* Añade un padding para más espacio a la derecha */
-}
-
-.small-text {
-  font-size: 20px; /* Tamaño del texto pequeño */
-  color: #000; /* Color del texto */
-  margin: 0; /* Elimina margen para mejor alineación */
-}
-
-h1 {
-  font-size: 100px;
-  color: #000; /* Asegúrate de que el color sea negro */
-  margin: 10px 0 0 0; /* Ajusta márgenes */
-}
-
-.description {
-  font-size: 20px; /* Tamaño de la descripción */
-  color: #000; /* Asegúrate de que el color sea negro */
-  margin-top: 20px; /* Espacio arriba de la descripción */
-}
-
-@media (min-width: 419px) {
-  h1 {
-    font-size: calc((0.0989119683 * 100vw + 58.5558852621px));
-  }
-}
-@media (min-width: 1430px) {
-  h1 {
-    font-size: 200px;
-  }
-}
-
-.cursor {
-  position: fixed;
-  background: #2128bd;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border-radius: 50%;
-  will-change: transform;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10000;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* Centra los botones */
-  margin-top: 20px; /* Espaciado superior */
-}
-
-.btn {
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 30px; /* Bordes completamente redondeados */
-  text-decoration: none; /* Elimina el subrayado */
-  font-weight: bold; /* Texto en negrita */
-  margin: 0 10px; /* Espaciado horizontal entre botones */
-  transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-.btn-black {
-  background-color: black; /* Fondo negro */
-  color: white; /* Texto blanco */
-}
-
-.btn-transparent {
-  background-color: transparent; /* Fondo transparente */
-  border: 2px solid black; /* Borde negro */
-  color: black; /* Texto negro */
-}
-
-.btn:hover {
-  opacity: 0.8; /* Efecto al pasar el ratón */
-}
-
-/* Responsive styles */
-@media (max-width: 1200px) {
-  .content {
-    padding: 20px 100px;
-  }
-  
-  h1 {
-    font-size: 80px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    padding: 20px 50px;
-  }
-  
-  h1 {
-    font-size: 60px;
-  }
-  
-  .small-text, .description {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 576px) {
-  .content {
-    padding: 20px 30px;
-  }
-  
-  h1 {
-    font-size: 40px;
-  }
-  
-  .small-text, .description {
-    font-size: 16px;
-  }
-  
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btn {
-    margin: 10px 0;
-    width: 200px;
-    text-align: center;
-  }
-}
-
-@media (max-height: 600px) {
-  .content {
-    justify-content: flex-start;
-    padding-top: 50px;
-  }
-}
-
-
-
 
 
 /* Marquee section */
@@ -1811,7 +1816,7 @@ h1 {
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
-  background-color: rgba(0, 0, 0, 0.811); /* Fondo negro mate */
+  background-color: rgba(13, 13, 13, 0.87); /* Fondo negro mate */
   width: 100%; /* Asegura que ocupe todo el ancho de su contenedor */
   padding: 1rem 0; /* Añade padding vertical */
 }
@@ -1850,4 +1855,11 @@ h1 {
 .enable-animation .marquee__content {
   animation: scroll 55s linear infinite; /* Aumenta el tiempo a 55s */
 }
+
+
+
+
+
+
+
 
